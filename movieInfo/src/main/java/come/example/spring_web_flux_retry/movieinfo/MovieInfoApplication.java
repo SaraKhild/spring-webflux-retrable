@@ -1,13 +1,13 @@
-package sa.com.baraq.acquiringservice.movie;
+package come.example.spring_web_flux_retry.movieinfo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MovieApplication {
+public class MovieInfoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieApplication.class, args);
+		SpringApplication.run(MovieInfoApplication.class, args);
 	}
 
 }
