@@ -1,0 +1,11 @@
+spring:
+  mongodb:
+    database: moviedb
+    host: localhost
+    port: 27017
+    username: moviedb
+    password: nFLhPPKOnkW1FA1e
+    authentication-database: admin
+
+server:
+  port: 8082

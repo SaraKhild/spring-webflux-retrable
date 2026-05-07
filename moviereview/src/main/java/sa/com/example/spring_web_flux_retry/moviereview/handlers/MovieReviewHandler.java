@@ -13,8 +13,12 @@ import sa.com.example.spring_web_flux_retry.moviereview.repositories.MovieReview
 @Component
 public class MovieReviewHandler {
 
-    @Autowired
     private MovieReviewRepository repository;
+
+    @Autowired
+    public MovieReviewHandler(MovieReviewRepository repository) {
+        this.repository = repository;
+    }
 
     public Mono<ServerResponse> add(ServerRequest request) {
         return request.bodyToMono(MovieReview.class)
