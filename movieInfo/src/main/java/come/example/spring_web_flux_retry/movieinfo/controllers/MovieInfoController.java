@@ -31,6 +31,10 @@ public class MovieInfoController {
 
     @GetMapping("get-movie-info-by-id/{id}")
     public Mono<ResponseEntity<MovieInfo>> getAllMovieInformation(@PathVariable String id) {
+        // this is for test the retry
+        if(id.equals("1")){
+            throw new RuntimeException("Test 500 Error");
+        }
         return movieInfoService.getMovieInfoById(id).map(movieInfo -> ResponseEntity.ok()
                         .body(movieInfo))
                 .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));

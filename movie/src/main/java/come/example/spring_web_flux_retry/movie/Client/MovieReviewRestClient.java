@@ -3,6 +3,7 @@ package come.example.spring_web_flux_retry.movie.Client;
 import come.example.spring_web_flux_retry.movie.exceptions.MovieReviewClientException;
 import come.example.spring_web_flux_retry.movie.exceptions.MovieReviewServerException;
 import come.example.spring_web_flux_retry.movie.models.MovieReview;
+import come.example.spring_web_flux_retry.movie.util.RetryUtil;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -38,7 +39,8 @@ public class MovieReviewRestClient {
                         }
 
                 )
-                .bodyToFlux(MovieReview.class);
+                .bodyToFlux(MovieReview.class)
+                .retryWhen(RetryUtil.retrySpec());
     }
 
 }
