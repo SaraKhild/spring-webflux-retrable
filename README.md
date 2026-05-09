@@ -219,7 +219,7 @@ The following image demonstrates retry attempts being triggered after a server-s
 
 ## 🔍 Retry Execution Logs
 
-![Retry Console Logs](images/retry-console.png)
+<img width="1130" height="208" alt="run logs" src="https://github.com/user-attachments/assets/b1ff9590-c1e7-4673-9f76-decf40e92ea9" />
 
 ---
 
@@ -229,7 +229,7 @@ The following image demonstrates testing the retry scenario using Swagger UI.
 
 ## 📘 Swagger Testing
 
-![Swagger Retry Testing](images/swagger-retry.png)
+<img width="1277" height="774" alt="swagger" src="https://github.com/user-attachments/assets/13e1e753-e197-4fef-a304-60110e2bbb7d" />
 
 ---
 
